@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		1F865DF9247839890069131F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F865DF8247839890069131F /* AppDelegate.swift */; };
 		1F865DFB247839890069131F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F865DFA247839890069131F /* SceneDelegate.swift */; };
-		1F865DFD247839890069131F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F865DFC247839890069131F /* ViewController.swift */; };
 		1F865E00247839890069131F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F865DFE247839890069131F /* Main.storyboard */; };
 		1F865E022478398D0069131F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F865E012478398D0069131F /* Assets.xcassets */; };
 		1F865E052478398D0069131F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F865E032478398D0069131F /* LaunchScreen.storyboard */; };
 		1F865E102478398D0069131F /* Family2FamilyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F865E0F2478398D0069131F /* Family2FamilyTests.swift */; };
 		1F865E1B2478398D0069131F /* Family2FamilyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F865E1A2478398D0069131F /* Family2FamilyUITests.swift */; };
+		7D083EC4247AFA0300EC64AC /* DonorMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D083EC3247AFA0300EC64AC /* DonorMainViewController.swift */; };
+		7D083EC6247AFA6200EC64AC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D083EC5247AFA6200EC64AC /* LoginViewController.swift */; };
+		7D083EC8247B03AD00EC64AC /* FamilyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D083EC7247B03AD00EC64AC /* FamilyViewController.swift */; };
+		7D083ECA247B05EB00EC64AC /* DonorSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D083EC9247B05EB00EC64AC /* DonorSignUpViewController.swift */; };
+		7D083ECC247B069600EC64AC /* FamilySignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D083ECB247B069600EC64AC /* FamilySignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +42,6 @@
 		1F865DF5247839890069131F /* Family2Family.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Family2Family.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F865DF8247839890069131F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F865DFA247839890069131F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1F865DFC247839890069131F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1F865DFF247839890069131F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F865E012478398D0069131F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F865E042478398D0069131F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +52,11 @@
 		1F865E162478398D0069131F /* Family2FamilyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Family2FamilyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F865E1A2478398D0069131F /* Family2FamilyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Family2FamilyUITests.swift; sourceTree = "<group>"; };
 		1F865E1C2478398D0069131F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D083EC3247AFA0300EC64AC /* DonorMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonorMainViewController.swift; sourceTree = "<group>"; };
+		7D083EC5247AFA6200EC64AC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7D083EC7247B03AD00EC64AC /* FamilyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyViewController.swift; sourceTree = "<group>"; };
+		7D083EC9247B05EB00EC64AC /* DonorSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonorSignUpViewController.swift; sourceTree = "<group>"; };
+		7D083ECB247B069600EC64AC /* FamilySignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilySignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +109,15 @@
 			children = (
 				1F865DF8247839890069131F /* AppDelegate.swift */,
 				1F865DFA247839890069131F /* SceneDelegate.swift */,
-				1F865DFC247839890069131F /* ViewController.swift */,
 				1F865DFE247839890069131F /* Main.storyboard */,
 				1F865E012478398D0069131F /* Assets.xcassets */,
 				1F865E032478398D0069131F /* LaunchScreen.storyboard */,
 				1F865E062478398D0069131F /* Info.plist */,
+				7D083EC3247AFA0300EC64AC /* DonorMainViewController.swift */,
+				7D083EC5247AFA6200EC64AC /* LoginViewController.swift */,
+				7D083EC7247B03AD00EC64AC /* FamilyViewController.swift */,
+				7D083EC9247B05EB00EC64AC /* DonorSignUpViewController.swift */,
+				7D083ECB247B069600EC64AC /* FamilySignUpViewController.swift */,
 			);
 			path = Family2Family;
 			sourceTree = "<group>";
@@ -259,9 +271,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F865DFD247839890069131F /* ViewController.swift in Sources */,
+				7D083EC6247AFA6200EC64AC /* LoginViewController.swift in Sources */,
 				1F865DF9247839890069131F /* AppDelegate.swift in Sources */,
 				1F865DFB247839890069131F /* SceneDelegate.swift in Sources */,
+				7D083EC4247AFA0300EC64AC /* DonorMainViewController.swift in Sources */,
+				7D083ECC247B069600EC64AC /* FamilySignUpViewController.swift in Sources */,
+				7D083EC8247B03AD00EC64AC /* FamilyViewController.swift in Sources */,
+				7D083ECA247B05EB00EC64AC /* DonorSignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
