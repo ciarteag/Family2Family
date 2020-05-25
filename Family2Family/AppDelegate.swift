@@ -18,8 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //This code is to connect the client application with the Parse server that was set up
         Parse.initialize(
              with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) -> Void in
-                 configuration.applicationId = "AppId"
-                 configuration.server = "ServerURL"
+                 configuration.applicationId = "fam2fam"
+                 configuration.server = "https://pure-retreat-04677.herokuapp.com/parse"
              })
         )
         return true

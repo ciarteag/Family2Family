@@ -1,5 +1,5 @@
 //
-//  DonorSignUpViewController.swift
+//  SignUpViewController.swift
 //  Family2Family
 //
 //  Created by Adriana Meza on 5/24/20.
@@ -9,23 +9,25 @@
 import UIKit
 import Parse
 
-class DonorSignUpViewController: UIViewController {
+class SignUpViewController: UIViewController {
 
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var firstnameField: UITextField!
+    
     @IBOutlet weak var lastnameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var phoneField: UITextField!
-    @IBOutlet weak var createAccountButton: UIButton!
     
+    @IBOutlet weak var accountType: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func onCreateAccount(_ sender: Any) {
+
+    @IBAction func onSignUp(_ sender: Any) {
         var user = PFUser()
         
         //TEST
@@ -37,7 +39,7 @@ class DonorSignUpViewController: UIViewController {
         user["firstname"] = "adriana"
         user["lastname"] = "meza"
         user["phone"] = "415-392-0202"
-        user["type"] = "donor"*/
+        user["type"] = 0*/
         
         
         user.username = usernameField.text
@@ -45,20 +47,19 @@ class DonorSignUpViewController: UIViewController {
         user.email = emailField.text
         
         // other fields can be set just like with PFObject
-        user["firsname"] = firstnameField.text
+        user["firstname"] = firstnameField.text
         user["lastname"] = lastnameField.text
         user["phone"] = phoneField.text //"415-392-0202"
-        user["type"] = "donor"
+        user["type"] = accountType.selectedSegmentIndex //0:family member, 1:donor
         
         user.signUpInBackground { (success, error) in
             if success {
-                print("A new user of type donor was created.")
+                print("A new user has been created.")
             }else{
                 print("Error: \(error?.localizedDescription)")
             }
         }
     }
-    
     /*
     // MARK: - Navigation
 

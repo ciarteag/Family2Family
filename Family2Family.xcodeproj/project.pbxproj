@@ -18,9 +18,8 @@
 		46D39C2F891DE372A1420A65 /* Pods_Family2Family.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11343916BE17BC93B2AC3318 /* Pods_Family2Family.framework */; };
 		7D083EC4247AFA0300EC64AC /* DonorMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D083EC3247AFA0300EC64AC /* DonorMainViewController.swift */; };
 		7D083EC6247AFA6200EC64AC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D083EC5247AFA6200EC64AC /* LoginViewController.swift */; };
-		7D083ECA247B05EB00EC64AC /* DonorSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D083EC9247B05EB00EC64AC /* DonorSignUpViewController.swift */; };
-		7D083ECC247B069600EC64AC /* FamilySignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D083ECB247B069600EC64AC /* FamilySignUpViewController.swift */; };
 		7DC3D631247B53CD00915270 /* FamilyMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC3D630247B53CD00915270 /* FamilyMainViewController.swift */; };
+		7DC3D633247B7C1900915270 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC3D632247B7C1900915270 /* SignUpViewController.swift */; };
 		AA270B3A291A33297F1AB4CF /* Pods_Family2Family_Family2FamilyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64AB9E0FFBDE7833138BF5AF /* Pods_Family2Family_Family2FamilyUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,9 +59,8 @@
 		72319DE1AEC9331189C6B03A /* Pods-Family2Family.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Family2Family.debug.xcconfig"; path = "Target Support Files/Pods-Family2Family/Pods-Family2Family.debug.xcconfig"; sourceTree = "<group>"; };
 		7D083EC3247AFA0300EC64AC /* DonorMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonorMainViewController.swift; sourceTree = "<group>"; };
 		7D083EC5247AFA6200EC64AC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		7D083EC9247B05EB00EC64AC /* DonorSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonorSignUpViewController.swift; sourceTree = "<group>"; };
-		7D083ECB247B069600EC64AC /* FamilySignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilySignUpViewController.swift; sourceTree = "<group>"; };
 		7DC3D630247B53CD00915270 /* FamilyMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMainViewController.swift; sourceTree = "<group>"; };
+		7DC3D632247B7C1900915270 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		822866777CB930A5D05AF5EE /* Pods_Family2FamilyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Family2FamilyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A21B8D3F5000FEBCCEA150ED /* Pods-Family2FamilyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Family2FamilyTests.debug.xcconfig"; path = "Target Support Files/Pods-Family2FamilyTests/Pods-Family2FamilyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D593A039AFCAA3F9F0884D6A /* Pods-Family2Family.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Family2Family.release.xcconfig"; path = "Target Support Files/Pods-Family2Family/Pods-Family2Family.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,9 +130,8 @@
 				1F865E062478398D0069131F /* Info.plist */,
 				7D083EC3247AFA0300EC64AC /* DonorMainViewController.swift */,
 				7D083EC5247AFA6200EC64AC /* LoginViewController.swift */,
-				7D083EC9247B05EB00EC64AC /* DonorSignUpViewController.swift */,
-				7D083ECB247B069600EC64AC /* FamilySignUpViewController.swift */,
 				7DC3D630247B53CD00915270 /* FamilyMainViewController.swift */,
+				7DC3D632247B7C1900915270 /* SignUpViewController.swift */,
 			);
 			path = Family2Family;
 			sourceTree = "<group>";
@@ -420,12 +417,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D083EC6247AFA6200EC64AC /* LoginViewController.swift in Sources */,
+				7DC3D633247B7C1900915270 /* SignUpViewController.swift in Sources */,
 				1F865DF9247839890069131F /* AppDelegate.swift in Sources */,
 				7DC3D631247B53CD00915270 /* FamilyMainViewController.swift in Sources */,
 				1F865DFB247839890069131F /* SceneDelegate.swift in Sources */,
 				7D083EC4247AFA0300EC64AC /* DonorMainViewController.swift in Sources */,
-				7D083ECC247B069600EC64AC /* FamilySignUpViewController.swift in Sources */,
-				7D083ECA247B05EB00EC64AC /* DonorSignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
