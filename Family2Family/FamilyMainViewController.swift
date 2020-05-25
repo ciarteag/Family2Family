@@ -1,5 +1,5 @@
 //
-//  FamilyViewController.swift
+//  FamilyMainViewController.swift
 //  Family2Family
 //
 //  Created by Adriana Meza on 5/24/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FamilyViewController: UIViewController {
+class FamilyMainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

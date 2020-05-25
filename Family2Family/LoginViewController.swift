@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var usernameField: UITextField!
@@ -20,16 +21,24 @@ class LoginViewController: UIViewController {
     
     @IBAction func onSignIn(_ sender: Any) {
         
-        //Logic for LogIn as in Partagram example
+        let username = usernameField.text!
+        let password = passwordField.text!
         
-        //Add a validation for the User type
+        PFUser.logInWithUsername(inBackground: username, password: password){
+            (user,error) in
+            if user != nil{
+                //type == donor
+                self.performSegue(withIdentifier: "LogInAsDonor", sender: nil)
+                //type == family
+                /*self.performSegue(withIdentifier: "LogInAsFamilyMember", sender: nil)*/
+            }
+        }
+
         
-        
-        /*self.performSegue(withIdentifier: "LogInAsDonor", sender: nil)*/
-        self.performSegue(withIdentifier: "LogInAsFamilyMember", sender: nil)
     }
-    
+
     @IBAction func onSignUp(_ sender: Any) {
+
     }
     /*
     // MARK: - Navigation
