@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Parse
 class FamilyMainViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -16,7 +16,16 @@ class FamilyMainViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func onLogout(_ sender: Any) {
+         PFUser.logOut()
+        
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        let loginViewController = main.instantiateViewController(withIdentifier: "LoginViewController")
+        
+        let sceneDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
+        sceneDelegate.window?.rootViewController = loginViewController
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -26,11 +26,15 @@ class LoginViewController: UIViewController {
         
         PFUser.logInWithUsername(inBackground: username, password: password){
             (user,error) in
+            
+            
             if user != nil{
-                //type == donor
-                self.performSegue(withIdentifier: "LogInAsDonor", sender: nil)
-                //type == family
-                /*self.performSegue(withIdentifier: "LogInAsFamilyMember", sender: nil)*/
+                if user?.value(forKey: "type") as! NSInteger == 0{
+                    self.performSegue(withIdentifier: "LogInAsFamilyMember", sender: nil)
+                }
+                if user?.value(forKey: "type") as! NSInteger == 1{
+                    self.performSegue(withIdentifier: "LogInAsDonor", sender: nil)
+                }
             }
         }
 
