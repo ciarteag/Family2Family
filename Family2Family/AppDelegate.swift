@@ -18,8 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //This code is to connect the client application with the Parse server that was set up
         Parse.initialize(
              with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) -> Void in
-                 configuration.applicationId = ""
-                 configuration.server = ""
+                 configuration.applicationId = "family2family"
+                 configuration.server = "http://family2family.com/parse"
              })
         )
         return true
