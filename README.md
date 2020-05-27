@@ -11,7 +11,7 @@ Unit 8: Group Milestone - Carlos Arteaga and Adriana Meza
 ## Overview
 
 ### Description
-Connects families that are in need with groceries and toiletries with assistance from donors. The application allows families to add items to their cart. Donors can use the application to help families through donations. Our organization will handle the delivery of goods, and in future we  also plan to care of shopping.
+Connects families that are in need of groceries and toiletries with potential donors. The application allows families to create a shopping list of items available in local stores and place this list as an order. Donors can use the application to check these orders and help families through donations. We will handle the delivery of goods to families. In future we also plan to offer shopping the products for a reasonable additional charge.
 
 ### App Evaluation
 - **Category:** Charity, Social Impact, Food & Drink
