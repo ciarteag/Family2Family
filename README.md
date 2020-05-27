@@ -43,14 +43,15 @@ Connects families that are in need with groceries and toiletries with assistance
 ### 3. Navigation
 **Tab Navigation** (Tab to Screen)
 
-**Family**
+**Registration**
+**Login**
+**As Family**
 * Grocery Selection
 * Cart Update
-* Confirm Order
-**Donor**
+* Confirmation Order
+**As Donor**
 * Family Selection
-* Family Confirmation
-* 
+* Fulfill order
 
 **Digital Wireframes & Mockups**
  https://www.figma.com/file/w8TXZh1l0a4ZSPUNIdOLZK/Family2Family?node-id=32%3A30
