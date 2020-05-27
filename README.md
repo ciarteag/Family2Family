@@ -41,17 +41,20 @@ Connects families that are in need with groceries and toiletries with assistance
 * Cart - Screen in which a family member can inspect all the items added to the cart
 * Order Summary - Screen in which a family member can review an order placed. 
 ### 3. Navigation
-**Tab Navigation** (Tab to Screen)
 
 **Registration**
+
 **Login**
-**As Family**
-* Grocery Selection
+* As Family
+** Grocery Selection
 * Cart Update
 * Confirmation Order
+
 **As Donor**
 * Family Selection
 * Fulfill order
 
-**Digital Wireframes & Mockups**
+**Digital Wireframess**
  https://www.figma.com/file/w8TXZh1l0a4ZSPUNIdOLZK/Family2Family?node-id=32%3A30
+ 
+ **Mockups**
