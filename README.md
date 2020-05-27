@@ -40,17 +40,18 @@ Connects families that are in need with groceries and toiletries with assistance
 * Product detail - Screen in which a family member can inspect a product in detail
 * Cart - Screen in which a family member can inspect all the items added to the cart
 * Order Summary - Screen in which a family member can review an order placed. 
+
 ### 3. Navigation
 
 **Registration**
+Our application has two types of users, families and donors. Each of them have a specfic navigation flow.
 
-**Login**
-* As Family
-** Grocery Selection
+**Login as a family**
+* Grocery Selection
 * Cart Update
 * Confirmation Order
 
-**As Donor**
+**Login as Donor**
 * Family Selection
 * Fulfill order
 
