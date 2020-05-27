@@ -73,4 +73,5 @@ Our application has two types of users, families and donors. Each of them have a
  https://www.figma.com/file/w8TXZh1l0a4ZSPUNIdOLZK/Family2Family?node-id=32%3A30
  
  **Mockups**
- <img src='https://github.com/ameza13/Parstagram/blob/master/InstagramAppWalkthrough.gif' width='' alt='fam2fam'/>
+ 
+<img src='https://github.com/ciarteag/Family2Family/blob/master/Screen%20Shot%202020-05-26%20at%206.59.39%20PM.png' width='' alt='fam2fam'/>
