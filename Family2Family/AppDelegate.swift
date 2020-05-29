@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.initialize(
              with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) -> Void in
                  configuration.applicationId = "family2family"
-                 configuration.server = "http://family2family.com/parse"
+                 configuration.server = "http://family2family.herokuapp.com/parse"
              })
         )
         return true
