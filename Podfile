@@ -6,8 +6,12 @@ target 'Family2Family' do
   use_frameworks!
 
   # Pods for Family2Family
+<<<<<<< HEAD
   pod "Parse"
   pod "AlamofireImage"
+=======
+pod 'Parse'
+>>>>>>> Added png file to assests and home storyboard
 
   target 'Family2FamilyTests' do
     inherit! :search_paths
