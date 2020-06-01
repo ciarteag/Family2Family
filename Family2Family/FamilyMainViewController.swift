@@ -8,12 +8,51 @@
 
 import UIKit
 import Parse
-class FamilyMainViewController: UIViewController {
+import AlamofireImage
 
+class FamilyMainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+
+    @IBOutlet weak var tableView: UITableView!
+    
+    var items = [PFObject]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        tableView.delegate  = self
+        tableView.dataSource = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let query = PFQuery(className: "Items")
+        //query.limit = 20
+        query.findObjectsInBackground { (items, error) in
+            if items != nil{
+                self.items = items!
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return items.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell") as! ProductCell
+        
+        let item = items[indexPath.row]
+        let imageFile = item["image"] as! PFFileObject
+        let urlString = imageFile.url!
+        let url = URL(string: urlString)!
+        
+        cell.productDescLabel.text = item["name"] as! String
+        cell.photoView.af_setImage(withURL: url)
+        
+        return cell
     }
     
     @IBAction func onLogout(_ sender: Any) {

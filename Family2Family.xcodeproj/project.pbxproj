@@ -16,6 +16,7 @@
 		1F865E1B2478398D0069131F /* Family2FamilyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F865E1A2478398D0069131F /* Family2FamilyUITests.swift */; };
 		245391D77FE70D1BF2151A8E /* Pods_Family2FamilyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 822866777CB930A5D05AF5EE /* Pods_Family2FamilyTests.framework */; };
 		46D39C2F891DE372A1420A65 /* Pods_Family2Family.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11343916BE17BC93B2AC3318 /* Pods_Family2Family.framework */; };
+		7D02370C2484AE62003A565C /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D02370B2484AE62003A565C /* ProductCell.swift */; };
 		7D083EC4247AFA0300EC64AC /* DonorMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D083EC3247AFA0300EC64AC /* DonorMainViewController.swift */; };
 		7D083EC6247AFA6200EC64AC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D083EC5247AFA6200EC64AC /* LoginViewController.swift */; };
 		7DC3D631247B53CD00915270 /* FamilyMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC3D630247B53CD00915270 /* FamilyMainViewController.swift */; };
@@ -57,6 +58,7 @@
 		1F865E1C2478398D0069131F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64AB9E0FFBDE7833138BF5AF /* Pods_Family2Family_Family2FamilyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Family2Family_Family2FamilyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72319DE1AEC9331189C6B03A /* Pods-Family2Family.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Family2Family.debug.xcconfig"; path = "Target Support Files/Pods-Family2Family/Pods-Family2Family.debug.xcconfig"; sourceTree = "<group>"; };
+		7D02370B2484AE62003A565C /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		7D083EC3247AFA0300EC64AC /* DonorMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonorMainViewController.swift; sourceTree = "<group>"; };
 		7D083EC5247AFA6200EC64AC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7DC3D630247B53CD00915270 /* FamilyMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMainViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				7D083EC5247AFA6200EC64AC /* LoginViewController.swift */,
 				7DC3D630247B53CD00915270 /* FamilyMainViewController.swift */,
 				7DC3D632247B7C1900915270 /* SignUpViewController.swift */,
+				7D02370B2484AE62003A565C /* ProductCell.swift */,
 			);
 			path = Family2Family;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				1F865DF9247839890069131F /* AppDelegate.swift in Sources */,
 				7DC3D631247B53CD00915270 /* FamilyMainViewController.swift in Sources */,
 				1F865DFB247839890069131F /* SceneDelegate.swift in Sources */,
+				7D02370C2484AE62003A565C /* ProductCell.swift in Sources */,
 				7D083EC4247AFA0300EC64AC /* DonorMainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
