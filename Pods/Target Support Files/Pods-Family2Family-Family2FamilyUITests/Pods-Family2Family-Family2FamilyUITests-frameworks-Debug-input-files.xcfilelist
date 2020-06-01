@@ -1,8 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-Family2Family-Family2FamilyUITests/Pods-Family2Family-Family2FamilyUITests-frameworks.sh
-<<<<<<< HEAD
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework
-=======
->>>>>>> Added png file to assests and home storyboard
 ${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework
 ${BUILT_PRODUCTS_DIR}/Parse/Parse.framework
