@@ -9,13 +9,45 @@
 import UIKit
 import Parse
 
-class DonorMainViewController: UIViewController {
+class DonorMainViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
+    
+    
+    var orders = [PFObject]()
+    var stores = [PFObject]()
+    
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        let query = PFQuery(className: "Order")
+        query.includeKeys(["family","objectId"])
+        
+        query.limit = 20
+        query.findObjectsInBackground { (orders, error) in
+            if orders != nil{
+                self.orders = orders!
+                self.collectionView.reloadData()
 
+            }
+            else{
+                print("failed")
+            }
+        }
+        
+
+        
+        
+        
+        //let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        //layout.minimumLineSpacing = 40
+       // layout.minimumInteritemSpacing = 40
         // Do any additional setup after loading the view.
     }
+    
+
     
     @IBAction func onLogout(_ sender: Any) {
          PFUser.logOut()
@@ -36,5 +68,29 @@ class DonorMainViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return orders.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DonorGridCell", for: indexPath) as! DonorGridCell
+        let order = orders[indexPath.item]
+        let family = order["family"] as! PFObject
+        cell.familyName.text = family.object(forKey: "lastname") as! String
+        cell.orderTotal.text = String(format: "%@",order["total"] as! CVarArg)
+        return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! UICollectionViewCell
+        let indexPath = collectionView.indexPath(for: cell)!
+        let order = orders[indexPath.item]
+        let detailsViewController = segue.destination as! OrderDetailsViewController
+        detailsViewController.order = order
+        collectionView.deselectItem(at: indexPath, animated: true)
+        
+    }
 
 }
