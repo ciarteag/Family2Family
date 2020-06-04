@@ -78,8 +78,14 @@ class DonorMainViewController: UIViewController,UICollectionViewDataSource,UICol
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DonorGridCell", for: indexPath) as! DonorGridCell
         let order = orders[indexPath.item]
         let family = order["family"] as! PFObject
-        cell.familyName.text = family.object(forKey: "lastname") as! String
-        cell.orderTotal.text = String(format: "%@",order["total"] as! CVarArg)
+        cell.familyName.text = "Family: " + (family.object(forKey: "lastname") as! String)
+        cell.orderTotal.text = "Total: " + (String(format: "%@",order["total"] as! CVarArg))
+        let date = String(format: "%@",order["Order_placed"] as! CVarArg)
+        let index = date.index(date.startIndex, offsetBy: 10)
+        let mySubstring = date.prefix(upTo: index) // Hello
+        cell.datePlaced.text = "Date: " + String(mySubstring)
+
+        
         return cell
     }
     
