@@ -150,9 +150,6 @@
                                                         <constraint firstAttribute="width" constant="50" id="pkR-zT-u9o"/>
                                                     </constraints>
                                                     <state key="normal" image="ellipsis_btn"/>
-                                                    <connections>
-                                                        <segue destination="46T-73-PxQ" kind="presentation" identifier="GoToProductDetail" id="TNG-fX-c56"/>
-                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trader Joes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4f-kP-x19">
                                                     <rect key="frame" x="16" y="277.5" width="327" height="24"/>
@@ -183,6 +180,7 @@
                                             <outlet property="photoView" destination="NBd-nc-zsR" id="zgp-sZ-5QT"/>
                                             <outlet property="productDescLabel" destination="8aV-qC-Ean" id="frB-ge-NUJ"/>
                                             <outlet property="storeLabel" destination="v4f-kP-x19" id="hA6-rd-ND7"/>
+                                            <segue destination="htW-ob-oQj" kind="show" id="sUM-eR-b8l"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -223,11 +221,15 @@
             <objects>
                 <viewController id="htW-ob-oQj" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jcv-sr-ZTf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rrb-Qp-IvM">
+                                <rect key="frame" x="16" y="60" width="343" height="187"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Product detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdg-23-fIZ">
-                                <rect key="frame" x="86" y="102" width="107" height="21"/>
+                                <rect key="frame" x="16" y="261" width="107" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -237,15 +239,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="ZF3-YZ-jwd"/>
                     </view>
-                    <navigationItem key="navigationItem" id="sd5-7g-u0l">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="qge-11-7SE">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="sd5-7g-u0l"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8IC-LV-pUs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3252" y="493"/>
+            <point key="canvasLocation" x="2632.8000000000002" y="492.50374812593708"/>
         </scene>
         <!--Family Orders-->
         <scene sceneID="mZE-4Q-lJp">
@@ -471,7 +469,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j4k-G8-BH0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2632.8000000000002" y="-221.73913043478262"/>
+            <point key="canvasLocation" x="2633" y="-210"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RCv-D8-Yhp">
@@ -865,7 +863,6 @@
         <!--Navigation Controller-->
         <scene sceneID="2qp-mk-9EZ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yQr-xY-vmB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pcd-eZ-4bz" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="skb-N0-7lE"/>
@@ -879,27 +876,9 @@
                         <segue destination="x7Y-JR-31V" kind="relationship" relationship="rootViewController" id="mfX-wf-CeU"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yQr-xY-vmB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="845"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="hvV-hw-Wkl">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="46T-73-PxQ" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="X8k-XJ-qH2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.1228077935" green="0.59270528469999995" blue="0.080344966840000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="htW-ob-oQj" kind="relationship" relationship="rootViewController" id="YRy-vU-4UC"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="38e-hc-DU1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2469.5999999999999" y="492.50374812593708"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="QRi-pi-wrb">
