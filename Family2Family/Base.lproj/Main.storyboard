@@ -474,6 +474,7 @@
                     <navigationItem key="navigationItem" id="4nD-uc-ImK"/>
                     <connections>
                         <outlet property="familyName" destination="Ipz-Dj-KHZ" id="jum-VR-A5Y"/>
+                        <outlet property="fulfillButton" destination="yip-dB-keX" id="d4v-ZB-hDw"/>
                         <outlet property="orderTotal" destination="dj3-54-I7E" id="sNF-dG-dF6"/>
                         <outlet property="tableView" destination="ssx-mr-IJB" id="jwP-VZ-YG1"/>
                     </connections>

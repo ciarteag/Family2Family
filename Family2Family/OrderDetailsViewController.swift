@@ -18,6 +18,7 @@ class OrderDetailsViewController: UIViewController,UITableViewDataSource,UITable
     var stores = [String]()
     
 
+    @IBOutlet weak var fulfillButton: UIButton!
     
     @IBOutlet weak var orderTotal: UILabel!
     
@@ -33,7 +34,10 @@ class OrderDetailsViewController: UIViewController,UITableViewDataSource,UITable
     let family = order["family"] as! PFObject
         familyName.text = family.object(forKey: "lastname") as? String
         familyName.text! += " Family"
-
+        let x = order["fulfilled"] as! Bool
+        if x == true{
+            fulfillButton.isEnabled = false;
+        }
         
         orderTotal.text = "Total: $" + (String(format: "%@",order["total"] as! CVarArg))
 
@@ -144,6 +148,7 @@ class OrderDetailsViewController: UIViewController,UITableViewDataSource,UITable
             let family = order["family"] as! PFObject
             let name = family.object(forKey: "lastname") as! String
             x.familyName = name;
+            x.Order = order
                 
         
     }
