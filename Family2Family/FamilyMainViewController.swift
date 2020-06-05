@@ -50,6 +50,7 @@ class FamilyMainViewController: UIViewController, UITableViewDelegate, UITableVi
         let url = URL(string: urlString)!
         
         cell.productDescLabel.text = item["name"] as! String
+        cell.storeLabel.text = item["store"] as! String
         cell.photoView.af_setImage(withURL: url)
         
         return cell
