@@ -17,9 +17,10 @@ class OrderDetailsViewController: UIViewController,UITableViewDataSource,UITable
     var items = [PFObject]()
     var stores = [String]()
     
-    
-    
 
+    
+    @IBOutlet weak var orderTotal: UILabel!
+    
     @IBOutlet weak var familyName: UILabel!
     
     @IBOutlet weak var tableView: UITableView!
@@ -32,7 +33,10 @@ class OrderDetailsViewController: UIViewController,UITableViewDataSource,UITable
     let family = order["family"] as! PFObject
         familyName.text = family.object(forKey: "lastname") as? String
         familyName.text! += " Family"
+
         
+        orderTotal.text = "Total: $" + (String(format: "%@",order["total"] as! CVarArg))
+
         
         let query = PFQuery(className: "ItemOrder")
         query.limit = 20
@@ -79,7 +83,6 @@ class OrderDetailsViewController: UIViewController,UITableViewDataSource,UITable
                 items_in_store.append(item)
             }
         }
-        print(items_in_store.count)
         return items_in_store.count + 1
 
     }
@@ -94,7 +97,6 @@ class OrderDetailsViewController: UIViewController,UITableViewDataSource,UITable
           
         //  let item = items[indexPath.row]
           cell.nameLabel.text = stores[indexPath.section] as!String
-            print(stores[indexPath.section])
           return cell
                 
     }
@@ -112,7 +114,6 @@ class OrderDetailsViewController: UIViewController,UITableViewDataSource,UITable
                 }
             }
             let item = store_items[indexPath.row-1]
-            print(item)
               let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! ItemCell
               
             //  let item = items[indexPath.row]
@@ -138,4 +139,12 @@ class OrderDetailsViewController: UIViewController,UITableViewDataSource,UITable
     }
     */
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            let x = segue.destination as! paymentViewController
+            let family = order["family"] as! PFObject
+            let name = family.object(forKey: "lastname") as! String
+            x.familyName = name;
+                
+        
+    }
 }
