@@ -17,7 +17,8 @@ class OrderDetailsViewController: UIViewController,UITableViewDataSource,UITable
     var items = [PFObject]()
     var stores = [String]()
     
-
+    @IBOutlet weak var fulfillLabel: UILabel!
+    
     @IBOutlet weak var fulfillButton: UIButton!
     
     @IBOutlet weak var orderTotal: UILabel!
@@ -37,8 +38,11 @@ class OrderDetailsViewController: UIViewController,UITableViewDataSource,UITable
         let x = order["fulfilled"] as! Bool
         if x == true{
             fulfillButton.isEnabled = false;
+            fulfillLabel.text = "FULFILLED"
         }
-        
+        else{
+            fulfillLabel.text = ""
+        }
         orderTotal.text = "Total: $" + (String(format: "%@",order["total"] as! CVarArg))
 
         
