@@ -8,11 +8,19 @@
 
 import UIKit
 
+protocol ProductCellDelegate: AnyObject {
+    func didTapButton(with tag: Int)
+}
+
 class ProductCell: UITableViewCell {
 
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var productDescLabel: UILabel!
     @IBOutlet weak var storeLabel: UILabel!
+    @IBOutlet weak var addProductButton: UIButton!
+    
+    weak var delegate: ProductCellDelegate?
+    private var buttonTag: Int = 0;
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,7 +34,6 @@ class ProductCell: UITableViewCell {
     }
 
     @IBAction func onAddProduct(_ sender: Any) {
-        //Find row and extract data
-        //Save to user
+        delegate?.didTapButton(with: buttonTag)
     }
 }

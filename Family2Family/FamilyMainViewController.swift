@@ -52,6 +52,8 @@ class FamilyMainViewController: UIViewController, UITableViewDelegate, UITableVi
         cell.productDescLabel.text = item["name"] as! String
         cell.storeLabel.text = item["store"] as! String
         cell.photoView.af_setImage(withURL: url)
+        cell.addProductButton.tag = item["qty"] as! Int
+        cell.delegate = self
         
         return cell
     }
@@ -66,14 +68,22 @@ class FamilyMainViewController: UIViewController, UITableViewDelegate, UITableVi
         sceneDelegate.window?.rootViewController = loginViewController
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
     }
-    */
+    
 
+}
+
+extension FamilyMainViewController:ProductCellDelegate{
+    func didTapButton(with tag: Int) {
+        print("\(tag)")
+    }
 }

@@ -140,7 +140,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwm-y9-bhU">
+                                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwm-y9-bhU">
                                                     <rect key="frame" x="316" y="237" width="51" height="51"/>
                                                     <state key="normal" image="plus_btnBig"/>
                                                     <connections>
@@ -165,6 +165,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="addProductButton" destination="bwm-y9-bhU" id="Dkk-2b-SQK"/>
                                             <outlet property="photoView" destination="NBd-nc-zsR" id="zgp-sZ-5QT"/>
                                             <outlet property="productDescLabel" destination="8aV-qC-Ean" id="frB-ge-NUJ"/>
                                             <outlet property="storeLabel" destination="v4f-kP-x19" id="hA6-rd-ND7"/>
@@ -1124,7 +1125,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="TGu-Jr-lcl"/>
         <segue reference="XxI-5g-KPI"/>
     </inferredMetricsTieBreakers>
     <resources>
