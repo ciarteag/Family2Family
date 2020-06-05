@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Parse
 
 class SignUpViewController: UIViewController {
 
@@ -19,55 +18,37 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var phoneField: UITextField!
     
-    @IBOutlet weak var accountType: UISegmentedControl!
+    var accountData = [0: "", 1: "",] //user, password
+    var personalData = [0: "", 1: "", 3: "", 4: ""] //name, lastname, email, phone number
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-    
 
-    @IBAction func onSignUp(_ sender: Any) {
-        var user = PFUser()
-        
-        //TEST
-        /*user.username = "myUsername"
-        user.password = "myPassword"
-        user.email = "email@example.com"
-        
-        // other fields can be set just like with PFObject
-        user["firstname"] = "adriana"
-        user["lastname"] = "meza"
-        user["phone"] = "415-392-0202"
-        user["type"] = 0*/
-        
-        
-        user.username = usernameField.text
-        user.password = passwordField.text
-        user.email = emailField.text
-        
-        // other fields can be set just like with PFObject
-        user["firstname"] = firstnameField.text
-        user["lastname"] = lastnameField.text
-        user["phone"] = phoneField.text //"415-392-0202"
-        user["type"] = accountType.selectedSegmentIndex //0:family member, 1:donor
-        
-        user.signUpInBackground { (success, error) in
-            if success {
-                print("A new user has been created.")
-            }else{
-                print("Error: \(error?.localizedDescription)")
-            }
-        }
-    }
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        //Collect Account data: user, password
+        self.accountData[0] = usernameField.text
+        self.accountData[1] = passwordField.text
+        print(accountData)
+        
+        //Collect Personal data: name, lastname, email, phone number
+        self.personalData[0] = firstnameField.text
+        self.personalData[1] = lastnameField.text
+        self.personalData[2] = emailField.text
+        self.personalData[3] = phoneField.text
+        print(personalData)
+        
         // Get the new view controller using segue.destination.
+        let step2 = segue.destination as! SignUpViewController2
+     
         // Pass the selected object to the new view controller.
+        step2.accountData = self.accountData
+        step2.personalData = self.personalData
     }
-    */
+    
 
 }

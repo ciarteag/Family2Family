@@ -10,9 +10,9 @@ import UIKit
 import Parse
 
 class LoginViewController: UIViewController {
+
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -41,9 +41,6 @@ class LoginViewController: UIViewController {
         
     }
 
-    @IBAction func onSignUp(_ sender: Any) {
-
-    }
     /*
     // MARK: - Navigation
 
