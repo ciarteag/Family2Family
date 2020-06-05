@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ProductCellDelegate: AnyObject {
-    func didTapButton(with tag: Int)
+    func didTapButton(with productId: String)
 }
 
 class ProductCell: UITableViewCell {
@@ -20,8 +20,9 @@ class ProductCell: UITableViewCell {
     @IBOutlet weak var addProductButton: UIButton!
     
     weak var delegate: ProductCellDelegate?
-    private var buttonTag: Int = 0;
-    
+    //private var buttonTag: Int = 0
+    private var objectId: String = ""
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -33,7 +34,14 @@ class ProductCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    func configure(with objectId: String){
+        
+        //self.buttonTag = buttonTag
+        //addProductButton.tag = buttonTag
+        self.objectId = objectId
+     
+    }
     @IBAction func onAddProduct(_ sender: Any) {
-        delegate?.didTapButton(with: buttonTag)
+        delegate?.didTapButton(with: objectId)
     }
 }

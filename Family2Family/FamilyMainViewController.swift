@@ -45,14 +45,16 @@ class FamilyMainViewController: UIViewController, UITableViewDelegate, UITableVi
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell") as! ProductCell
         
         let item = items[indexPath.row]
+        let objectId = item.objectId as! String
         let imageFile = item["image"] as! PFFileObject
         let urlString = imageFile.url!
         let url = URL(string: urlString)!
-        
+    
         cell.productDescLabel.text = item["name"] as! String
         cell.storeLabel.text = item["store"] as! String
         cell.photoView.af_setImage(withURL: url)
-        cell.addProductButton.tag = item["qty"] as! Int
+        
+        cell.configure(with: objectId)
         cell.delegate = self
         
         return cell
@@ -78,12 +80,10 @@ class FamilyMainViewController: UIViewController, UITableViewDelegate, UITableVi
         // Pass the selected object to the new view controller.
         
     }
-    
-
 }
 
 extension FamilyMainViewController:ProductCellDelegate{
-    func didTapButton(with tag: Int) {
-        print("\(tag)")
+    func didTapButton(with objectId: String) {
+        print(objectId)
     }
 }
