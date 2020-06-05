@@ -47,6 +47,10 @@ class DonorMainViewController: UIViewController,UICollectionViewDataSource,UICol
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        collectionView.reloadData()
+    }
+    
 
     
     @IBAction func onLogout(_ sender: Any) {
@@ -84,7 +88,16 @@ class DonorMainViewController: UIViewController,UICollectionViewDataSource,UICol
         let index = date.index(date.startIndex, offsetBy: 10)
         let mySubstring = date.prefix(upTo: index) // Hello
         cell.datePlaced.text = "Date: " + String(mySubstring)
-
+        let x = order["fulfilled"] as! Bool
+        if x == true
+        {
+            cell.contentView.backgroundColor = UIColor.gray;
+        }
+        else{
+            cell.contentView.backgroundColor = UIColor.green;
+        }
+        
+ 
         
         return cell
     }

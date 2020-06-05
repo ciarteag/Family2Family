@@ -417,7 +417,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TOTAL                     " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dj3-54-I7E">
-                                <rect key="frame" x="16" y="139" width="310" height="32"/>
+                                <rect key="frame" x="16" y="139" width="310" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <nil key="textColor"/>
@@ -432,6 +432,13 @@
                                     <segue destination="7ZB-zA-SwV" kind="showDetail" id="TGu-Jr-lcl"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fulfilled" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKW-CN-2tr">
+                                <rect key="frame" x="191" y="136" width="168" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="bKQ-LK-Ai4"/>
@@ -439,6 +446,8 @@
                     <navigationItem key="navigationItem" id="4nD-uc-ImK"/>
                     <connections>
                         <outlet property="familyName" destination="Ipz-Dj-KHZ" id="jum-VR-A5Y"/>
+                        <outlet property="fulfillButton" destination="yip-dB-keX" id="d4v-ZB-hDw"/>
+                        <outlet property="fulfillLabel" destination="IKW-CN-2tr" id="2Ls-BB-5b5"/>
                         <outlet property="orderTotal" destination="dj3-54-I7E" id="sNF-dG-dF6"/>
                         <outlet property="tableView" destination="ssx-mr-IJB" id="jwP-VZ-YG1"/>
                     </connections>

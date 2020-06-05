@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import Parse
 
 class paymentViewController: UIViewController {
     var familyName = String();
+    var Order = PFObject(className: "Order");
+    
 
     @IBOutlet weak var payButton: UIButton!
     override func viewDidLoad() {
@@ -24,6 +27,7 @@ class paymentViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     let x = segue.destination as! confirmationViewController
     x.familyName = familyName;
+        x.order = Order;
         
     }
     
