@@ -25,4 +25,8 @@ class ProductCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func onAddProduct(_ sender: Any) {
+        //Find row and extract data
+        //Save to user
+    }
 }
