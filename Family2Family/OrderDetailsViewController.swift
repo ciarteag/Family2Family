@@ -92,7 +92,6 @@ class OrderDetailsViewController: UIViewController,UITableViewDataSource,UITable
             }
         }
         return items_in_store.count + 1
-
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -107,7 +106,7 @@ class OrderDetailsViewController: UIViewController,UITableViewDataSource,UITable
           cell.nameLabel.text = stores[indexPath.section] as!String
           return cell
                 
-    }
+          }
           else
           {
             let store = stores[indexPath.section] as! String

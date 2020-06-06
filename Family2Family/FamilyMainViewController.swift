@@ -16,6 +16,9 @@ class FamilyMainViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var tableView: UITableView!
     
     var items = [PFObject]()
+    var shoppingCart = [String: Int]()
+    //var shoppingCart = [String: [Any]]()
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +31,7 @@ class FamilyMainViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let query = PFQuery(className: "Items")
-        //query.limit = 20
+        //query.whereKey("qty", equalTo:"Ne5lGlM5e4") //more than zero
         query.findObjectsInBackground { (items, error) in
             if items != nil{
                 self.items = items!
@@ -45,15 +48,17 @@ class FamilyMainViewController: UIViewController, UITableViewDelegate, UITableVi
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell") as! ProductCell
         
         let item = items[indexPath.row]
-        let objectId = item.objectId as! String
         let imageFile = item["image"] as! PFFileObject
         let urlString = imageFile.url!
         let url = URL(string: urlString)!
     
+        let objectId = item.objectId as! String
+
+        
         cell.productDescLabel.text = item["name"] as! String
         cell.storeLabel.text = item["store"] as! String
         cell.photoView.af_setImage(withURL: url)
-        
+            
         cell.configure(with: objectId)
         cell.delegate = self
         
@@ -70,20 +75,32 @@ class FamilyMainViewController: UIViewController, UITableViewDelegate, UITableVi
         sceneDelegate.window?.rootViewController = loginViewController
     }
     
-    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let groceries = segue.destination as! CartViewController
         
+        // Pass the selected object to the new view controller.
+        groceries.shoppingCart = self.shoppingCart
     }
 }
 
 extension FamilyMainViewController:ProductCellDelegate{
     func didTapButton(with objectId: String) {
-        print(objectId)
+        print("product id selected: \(objectId)")
+        
+        let key = objectId
+        let keyExists = shoppingCart[key] != nil
+        if keyExists {
+            //updated count
+            let val = shoppingCart[key]!
+            shoppingCart[key] = val + 1
+        }else {
+            //insert count
+            shoppingCart[key] = 1
+        }
     }
 }
