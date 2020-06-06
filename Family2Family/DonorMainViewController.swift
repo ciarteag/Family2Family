@@ -91,7 +91,7 @@ class DonorMainViewController: UIViewController,UICollectionViewDataSource,UICol
         let x = order["fulfilled"] as! Bool
         if x == true
         {
-            cell.contentView.backgroundColor = UIColor.gray;
+            cell.contentView.backgroundColor = UIColor.lightGray;
         }
         else{
             cell.contentView.backgroundColor = UIColor.green;
