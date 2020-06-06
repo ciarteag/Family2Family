@@ -27,6 +27,7 @@
 		7D083EC6247AFA6200EC64AC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D083EC5247AFA6200EC64AC /* LoginViewController.swift */; };
 		7D30A6B5248974B40090BB53 /* SignUpViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D30A6B4248974B40090BB53 /* SignUpViewController2.swift */; };
 		7D30A6B72489EA740090BB53 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D30A6B62489EA740090BB53 /* CartViewController.swift */; };
+		7D30A6B9248B58550090BB53 /* CartItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D30A6B8248B58540090BB53 /* CartItemCell.swift */; };
 		7DC3D631247B53CD00915270 /* FamilyMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC3D630247B53CD00915270 /* FamilyMainViewController.swift */; };
 		7DC3D633247B7C1900915270 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC3D632247B7C1900915270 /* SignUpViewController.swift */; };
 		AA270B3A291A33297F1AB4CF /* Pods_Family2Family_Family2FamilyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64AB9E0FFBDE7833138BF5AF /* Pods_Family2Family_Family2FamilyUITests.framework */; };
@@ -77,6 +78,7 @@
 		7D083EC5247AFA6200EC64AC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7D30A6B4248974B40090BB53 /* SignUpViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController2.swift; sourceTree = "<group>"; };
 		7D30A6B62489EA740090BB53 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		7D30A6B8248B58540090BB53 /* CartItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemCell.swift; sourceTree = "<group>"; };
 		7DC3D630247B53CD00915270 /* FamilyMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMainViewController.swift; sourceTree = "<group>"; };
 		7DC3D632247B7C1900915270 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		822866777CB930A5D05AF5EE /* Pods_Family2FamilyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Family2FamilyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +161,7 @@
 				7D02370B2484AE62003A565C /* ProductCell.swift */,
 				7D30A6B4248974B40090BB53 /* SignUpViewController2.swift */,
 				7D30A6B62489EA740090BB53 /* CartViewController.swift */,
+				7D30A6B8248B58540090BB53 /* CartItemCell.swift */,
 			);
 			path = Family2Family;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 				45C3945824899FE100A68F95 /* paymentViewController.swift in Sources */,
 				7DC3D633247B7C1900915270 /* SignUpViewController.swift in Sources */,
 				45A7569B24873E29003F84B9 /* ItemCell.swift in Sources */,
+				7D30A6B9248B58550090BB53 /* CartItemCell.swift in Sources */,
 				1F865DF9247839890069131F /* AppDelegate.swift in Sources */,
 				7D30A6B72489EA740090BB53 /* CartViewController.swift in Sources */,
 				45C3945A2489B39E00A68F95 /* confirmationViewController.swift in Sources */,
