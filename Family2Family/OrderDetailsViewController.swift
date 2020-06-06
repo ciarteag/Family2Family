@@ -38,6 +38,7 @@ class OrderDetailsViewController: UIViewController,UITableViewDataSource,UITable
         let x = order["fulfilled"] as! Bool
         if x == true{
             fulfillButton.isEnabled = false;
+            fulfillButton.setTitle("FULFILLED", for: .normal)
             fulfillLabel.text = "FULFILLED"
         }
         else{
