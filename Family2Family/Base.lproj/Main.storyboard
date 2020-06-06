@@ -555,7 +555,7 @@
                                     <color key="titleColor" red="0.57380741830000004" green="0.56553578380000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="TOU-Tt-24I" kind="presentation" modalPresentationStyle="fullScreen" id="XxI-5g-KPI"/>
+                                    <segue destination="atj-gU-wcT" kind="presentation" modalPresentationStyle="fullScreen" id="kF9-xA-0Py"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -577,6 +577,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="atj-gU-wcT" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="ac7-3G-zKT"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jo8-sG-cZf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1135,7 +1136,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="lhk-03-JLH"/>
+        <segue reference="kF9-xA-0Py"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="cart_btn" width="50" height="50"/>

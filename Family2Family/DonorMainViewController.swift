@@ -41,9 +41,9 @@ class DonorMainViewController: UIViewController,UICollectionViewDataSource,UICol
         
         
         
-        //let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        //layout.minimumLineSpacing = 40
-       // layout.minimumInteritemSpacing = 40
+       // let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+      //  layout.minimumLineSpacing = 4
+      // layout.minimumInteritemSpacing = 0
         // Do any additional setup after loading the view.
     }
     
@@ -94,7 +94,7 @@ class DonorMainViewController: UIViewController,UICollectionViewDataSource,UICol
             cell.contentView.backgroundColor = UIColor.lightGray;
         }
         else{
-            cell.contentView.backgroundColor = UIColor.green;
+            cell.contentView.backgroundColor = UIColor(red: 130.0/255, green: 149.0/255, blue: 80.0/255, alpha: 1.0);
         }
         
  
