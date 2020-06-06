@@ -74,6 +74,9 @@ Our application has two types of users, families and donors. Each of them have a
  
  **Mockups**
  
+ Donor View
 <img src='https://raw.githubusercontent.com/ciarteag/Family2Family/master/fam2fam-DonorFlow.gif' width='' alt='fam2fam'/>
+Family View
 <img src='https://raw.githubusercontent.com/ciarteag/Family2Family/master/fam2fam-FamilyFlow.gif' width='' alt='fam2fam'/>
+Sign up
 <img src='https://raw.githubusercontent.com/ciarteag/Family2Family/master/fam2fam-signup.gif' width='' alt='fam2fam'/>
