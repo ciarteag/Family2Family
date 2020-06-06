@@ -1136,6 +1136,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="TGu-Jr-lcl"/>
         <segue reference="kF9-xA-0Py"/>
     </inferredMetricsTieBreakers>
     <resources>

@@ -69,7 +69,10 @@ class CartViewController: UIViewController, UITableViewDelegate,UITableViewDataS
         let cartItem = items[indexPath.row]
         
         cell.itemNameLabel.text = cartItem["name"] as! String
-        cell.priceLabel.text = String(cartItem["price"] as! Double)
+        
+        let price = cartItem["price"] as! Double
+        cell.priceLabel.text = String(format: "%.2f", price)
+        /*String(format: "%@",item["sellingPrice"] as! CVarArg)*/
         
         let key = cartItem.objectId!
         let qty = shoppingCart[key]!
