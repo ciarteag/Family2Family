@@ -1,5 +1,5 @@
 # Family2Family
-Unit 8: Group Milestone - Carlos Arteaga and Adriana Meza
+Unit 8: Group Milestone - Carlos Arteaga, Adriana Meza, Angelo Basa
 ===
 
 # TUNIN
